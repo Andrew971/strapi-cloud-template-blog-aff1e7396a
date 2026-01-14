@@ -5,6 +5,19 @@
     "icon": "briefcase"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "brief": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "avantages": {
+      "type": "json"
+    },
+    "features": {
+      "type": "json"
+    }
+  },
   "config": {}
 }

@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_marketings",
+  "info": {
+    "singularName": "product-marketing",
+    "pluralName": "product-marketings",
+    "displayName": "Product Marketing"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product"
+    },
+    "titre": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "titre"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "collectionName": "components_product_technical_informations",
+  "info": {
+    "displayName": "Technical Information"
+  },
+  "options": {},
+  "attributes": {
+    "ph": {
+      "type": "string"
+    },
+    "appearance": {
+      "type": "string"
+    },
+    "fragrance": {
+      "type": "string"
+    },
+    "cocnentration": {
+      "type": "string"
+    },
+    "safety": {
+      "type": "text"
+    },
+    "packaging": {
+      "type": "string"
+    },
+    "technicalFile": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "securityFile": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

@@ -1,27 +1,38 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
-export interface CommunCollectionInformation extends Struct.ComponentSchema {
-  collectionName: 'components_commun_collection_informations';
-  info: {
-    displayName: 'Collection Information';
-    icon: 'information';
-  };
-  attributes: {
-    description: Schema.Attribute.String;
-    label: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.Unique;
-    slug: Schema.Attribute.String & Schema.Attribute.Required;
-  };
-}
-
 export interface ProductProductInformation extends Struct.ComponentSchema {
   collectionName: 'components_product_product_informations';
   info: {
     displayName: 'Product Information';
     icon: 'briefcase';
   };
-  attributes: {};
+  attributes: {
+    avantages: Schema.Attribute.JSON;
+    brief: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    features: Schema.Attribute.JSON;
+  };
+}
+
+export interface ProductTechnicalInformation extends Struct.ComponentSchema {
+  collectionName: 'components_product_technical_informations';
+  info: {
+    displayName: 'Technical Information';
+  };
+  attributes: {
+    appearance: Schema.Attribute.String;
+    cocnentration: Schema.Attribute.String;
+    fragrance: Schema.Attribute.String;
+    packaging: Schema.Attribute.String;
+    ph: Schema.Attribute.String;
+    safety: Schema.Attribute.Text;
+    securityFile: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    technicalFile: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+  };
 }
 
 export interface SharedMedia extends Struct.ComponentSchema {
@@ -89,8 +100,8 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
-      'commun.collection-information': CommunCollectionInformation;
       'product.product-information': ProductProductInformation;
+      'product.technical-information': ProductTechnicalInformation;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
