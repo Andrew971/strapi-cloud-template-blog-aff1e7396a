@@ -70,6 +70,16 @@
     },
     "rank": {
       "type": "json"
+    },
+    "technicalInformation": {
+      "type": "component",
+      "component": "product.technical-information",
+      "repeatable": false
+    },
+    "productInformation": {
+      "type": "component",
+      "component": "product.product-information",
+      "repeatable": true
     }
   }
 }

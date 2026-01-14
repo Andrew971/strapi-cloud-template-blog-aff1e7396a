@@ -660,9 +660,17 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     poster: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    productInformation: Schema.Attribute.Component<
+      'product.product-information',
+      true
+    >;
     publishedAt: Schema.Attribute.DateTime;
     rank: Schema.Attribute.JSON;
     slug: Schema.Attribute.UID<'titre'>;
+    technicalInformation: Schema.Attribute.Component<
+      'product.technical-information',
+      false
+    >;
     titre: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
