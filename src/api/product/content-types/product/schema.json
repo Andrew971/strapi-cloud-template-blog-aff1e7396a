@@ -51,11 +51,6 @@
         "audios"
       ]
     },
-    "articles": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::article.article"
-    },
     "catalogues": {
       "type": "relation",
       "relation": "oneToMany",
@@ -80,6 +75,11 @@
       "type": "component",
       "component": "product.product-information",
       "repeatable": true
+    },
+    "variants": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::variant.variant"
     }
   }
 }
