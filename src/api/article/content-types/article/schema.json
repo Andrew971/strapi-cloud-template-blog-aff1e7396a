@@ -49,12 +49,6 @@
     },
     "valeur": {
       "type": "string"
-    },
-    "variants": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::variant.variant",
-      "mappedBy": "article"
     }
   }
 }

@@ -31,16 +31,6 @@
         "audios"
       ]
     },
-    "cover": {
-      "type": "media",
-      "multiple": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
     "gallerie": {
       "type": "media",
       "multiple": true,
