@@ -674,7 +674,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    variants: Schema.Attribute.Relation<'oneToMany', 'api::variant.variant'>;
+    variants: Schema.Attribute.Relation<'manyToMany', 'api::variant.variant'>;
   };
 }
 
@@ -699,6 +699,7 @@ export interface ApiVariantVariant extends Struct.CollectionTypeSchema {
       'api::variant.variant'
     > &
       Schema.Attribute.Private;
+    products: Schema.Attribute.Relation<'manyToMany', 'api::product.product'>;
     publishedAt: Schema.Attribute.DateTime;
     type: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;

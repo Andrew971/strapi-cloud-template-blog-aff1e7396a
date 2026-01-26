@@ -14,7 +14,7 @@
     "fragrance": {
       "type": "string"
     },
-    "cocnentration": {
+    "concentration": {
       "type": "string"
     },
     "safety": {

@@ -11,16 +11,22 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "type": {
+    "valeur": {
       "type": "string"
     },
-    "valeur": {
+    "type": {
       "type": "string"
     },
     "article": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::article.article",
+      "inversedBy": "variants"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
       "inversedBy": "variants"
     }
   }

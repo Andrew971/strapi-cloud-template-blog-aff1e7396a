@@ -7,7 +7,7 @@ export interface ProductProductInformation extends Struct.ComponentSchema {
     icon: 'briefcase';
   };
   attributes: {
-    avantages: Schema.Attribute.JSON;
+    astuces: Schema.Attribute.JSON;
     brief: Schema.Attribute.String;
     description: Schema.Attribute.Text;
     features: Schema.Attribute.JSON;
@@ -21,7 +21,7 @@ export interface ProductTechnicalInformation extends Struct.ComponentSchema {
   };
   attributes: {
     appearance: Schema.Attribute.String;
-    cocnentration: Schema.Attribute.String;
+    concentration: Schema.Attribute.String;
     fragrance: Schema.Attribute.String;
     packaging: Schema.Attribute.String;
     ph: Schema.Attribute.String;

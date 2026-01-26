@@ -12,7 +12,7 @@
     "description": {
       "type": "text"
     },
-    "avantages": {
+    "astuces": {
       "type": "json"
     },
     "features": {

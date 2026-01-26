@@ -63,6 +63,12 @@
       "target": "api::category.category",
       "mappedBy": "product"
     },
+    "variants": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::variant.variant",
+      "mappedBy": "products"
+    },
     "rank": {
       "type": "json"
     },
@@ -75,11 +81,6 @@
       "type": "component",
       "component": "product.product-information",
       "repeatable": true
-    },
-    "variants": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::variant.variant"
     }
   }
 }
